@@ -108,33 +108,5 @@ namespace SensorTag
                 PropertyChanged(this, new PropertyChangedEventArgs(name));
             }
         }
-
-        public static async Task<Settings> LoadAsync()
-        {
-            var store = new IsolatedStorage<Settings>();
-            Settings result = null;
-            try
-            {
-                result = await store.LoadFromFileAsync(Windows.Storage.ApplicationData.Current.LocalFolder, "settings.xml");
-            }
-            catch
-            {
-            }
-            return result;
-        }
-
-        bool saving;
-
-        public async Task SaveAsync()
-        {
-            if (!saving)
-            {
-                saving = true;
-                var store = new IsolatedStorage<Settings>();
-                await store.SaveToFileAsync(Windows.Storage.ApplicationData.Current.LocalFolder, "settings.xml", this);
-            }
-            saving = false;
-        }
-
     }
 }

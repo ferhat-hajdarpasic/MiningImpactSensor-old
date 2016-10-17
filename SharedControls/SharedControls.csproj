@@ -35,14 +35,6 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <Page Include="Controls\CompassControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Controls\EditableTextBlock.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Controls\ScrollingGraph.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,49 +59,16 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\GyroPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Pages\HumidityPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Pages\IRTemperaturePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Pages\LightPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Pages\MagnetometerPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Pages\PressurePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <TargetPlatform Include="WindowsPhoneApp, Version=8.1" />
     <TargetPlatform Include="Windows, Version=8.1" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\CompassControl.xaml.cs">
-      <DependentUpon>CompassControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\EditableTextBlock.xaml.cs">
-        <DependentUpon>EditableTextBlock.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Controls\EmptyStringVisibilityConverter.cs" />
     <Compile Include="Controls\ScrollingGraph.xaml.cs">
       <DependentUpon>ScrollingGraph.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\AnimationHelper.cs" />
-    <Compile Include="Helpers\ConversionExtensions.cs" />
-    <Compile Include="Helpers\IsolatedStorage.cs" />
     <Compile Include="Helpers\IWindowVisibilityWatcher.cs" />
     <Compile Include="Helpers\Settings.cs" />
     <Compile Include="Pages\AccelerometerPage.xaml.cs">
@@ -124,31 +83,11 @@
     <Compile Include="Pages\DevicePage.xaml.cs">
       <DependentUpon>DevicePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\GyroPage.xaml.cs">
-      <DependentUpon>GyroPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\HumidityPage.xaml.cs">
-      <DependentUpon>HumidityPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\IRTemperaturePage.xaml.cs">
-      <DependentUpon>IRTemperaturePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\LightPage.xaml.cs">
-      <DependentUpon>LightPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\MagnetometerPage.xaml.cs">
-      <DependentUpon>MagnetometerPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PressurePage.xaml.cs">
-      <DependentUpon>PressurePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controls\TileControl.xaml.cs">
       <DependentUpon>TileControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\TileModel.cs" />
-    <Compile Include="Controls\TiltContentControl.cs" />
-    <Compile Include="Helpers\XamlHelpers.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SensorTagLibrary\SensorTagLibrary.csproj">

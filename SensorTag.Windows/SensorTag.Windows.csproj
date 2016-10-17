@@ -134,13 +134,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Accelerometer.png" />
-    <Content Include="Assets\Barometer.png" />
     <Content Include="Assets\Buttons.png" />
-    <Content Include="Assets\Compass.png" />
     <Content Include="Assets\Eye.png" />
-    <Content Include="Assets\Gyroscope.png" />
-    <Content Include="Assets\Humidity.png" />
-    <Content Include="Assets\IRTemperature.png" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\SensorTag.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />

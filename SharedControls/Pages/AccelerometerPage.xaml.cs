@@ -51,12 +51,7 @@ namespace SensorTag.Pages
                     sensor.Accelerometer.AccelerometerMeasurementValueChanged += OnAccelerometerMeasurementValueChanged;
                     period = await sensor.Accelerometer.GetPeriod();
                 }
-                else if (sensor.Version == 2)
-                {
-                    await sensor.Movement.StartReading(MovementFlags.Accel2G | MovementFlags.AccelX | MovementFlags.AccelY | MovementFlags.AccelZ);
-                    sensor.Movement.MovementMeasurementValueChanged += OnMovementMeasurementValueChanged;
-                    period = await sensor.Movement.GetPeriod();
-                }
+
                 SetSensitivity(period.Value);
                 ShowMessage("");
             }
@@ -96,31 +91,14 @@ namespace SensorTag.Pages
             {
                 sensor.Accelerometer.AccelerometerMeasurementValueChanged -= OnAccelerometerMeasurementValueChanged;
             }
-            else if (sensor.Movement != null)
-            {
-                sensor.Movement.MovementMeasurementValueChanged -= OnMovementMeasurementValueChanged;
-            }
             //await sensor.Accelerometer.StopReading();
         }
 
         AccelerometerMeasurement measurement;
-        MovementMeasurement movement;
 
         private void OnAccelerometerMeasurementValueChanged(object sender, AccelerometerMeasurementEventArgs e)
         {
             measurement = e.Measurement;
-            if (_timer == null)
-            {
-                var nowait = Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, new Windows.UI.Core.DispatchedHandler(() =>
-                {
-                    StartTimer();
-                }));
-            }
-        }
-
-        void OnMovementMeasurementValueChanged(object sender, MovementEventArgs e)
-        {
-            movement = e.Measurement;
             if (_timer == null)
             {
                 var nowait = Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, new Windows.UI.Core.DispatchedHandler(() =>
@@ -181,13 +159,6 @@ namespace SensorTag.Pages
                     y = measurement.Y;
                     z = measurement.Z;
                 }
-                else if (movement != null)
-                {
-                    x = movement.AccelX;
-                    y = movement.AccelY;
-                    z = movement.AccelZ;
-                }
-
 
                 XAxis.SetCurrentValue(x);
                 YAxis.SetCurrentValue(y);
@@ -217,10 +188,6 @@ namespace SensorTag.Pages
                 {
                     await sensor.Accelerometer.SetPeriod(period.Value);
                 }
-                else if (sensor.Movement != null)
-                {
-                    await sensor.Movement.SetPeriod(period.Value);
-                }
             }
             catch { }
             updatingPeriod = false;
@@ -236,11 +203,6 @@ namespace SensorTag.Pages
                     sensor.Accelerometer.AccelerometerMeasurementValueChanged += OnAccelerometerMeasurementValueChanged;
                     await sensor.Accelerometer.StartReading();
                 }
-                else if (sensor.Version == 2)
-                {
-                    sensor.Movement.MovementMeasurementValueChanged += OnMovementMeasurementValueChanged;
-                    await sensor.Movement.StartReading(MovementFlags.Accel2G | MovementFlags.AccelX | MovementFlags.AccelY | MovementFlags.AccelZ);
-                }
             }
             else
             {
@@ -248,11 +210,6 @@ namespace SensorTag.Pages
                 {
                     sensor.Accelerometer.AccelerometerMeasurementValueChanged -= OnAccelerometerMeasurementValueChanged;
                     await sensor.Accelerometer.StopReading();
-                }
-                else if (sensor.Version == 2)
-                {
-                    sensor.Movement.MovementMeasurementValueChanged -= OnMovementMeasurementValueChanged;
-                    await sensor.Movement.StopReading();
                 }
             }
         }

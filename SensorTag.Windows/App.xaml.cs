@@ -24,7 +24,6 @@ namespace SensorTag
     /// </summary>
     sealed partial class App : Application
     {
-        Settings _settings;
         SensorTag _sensor;
 
         /// <summary>
@@ -53,13 +52,6 @@ namespace SensorTag
         /// <param name="e">Details about the launch request and process.</param>
         protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
-            _settings = await Settings.LoadAsync();
-            if (_settings == null)
-            {
-                _settings = new Settings();
-                await _settings.SaveAsync();
-            }
-
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,
