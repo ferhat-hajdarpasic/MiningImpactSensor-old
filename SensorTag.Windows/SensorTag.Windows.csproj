@@ -111,17 +111,35 @@
       <Project>{702df202-1cfe-456d-9df9-5e4e4daa02a4}</Project>
       <Name>SensorTagLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SharedControls\SharedControls.csproj">
-      <Project>{f22119a4-141d-426e-8653-e41599e03099}</Project>
-      <Name>SharedControls</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\EmptyStringVisibilityConverter.cs" />
+    <Compile Include="Controls\ScrollingGraph.xaml.cs">
+      <DependentUpon>ScrollingGraph.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TileControl.xaml.cs">
+      <DependentUpon>TileControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TileModel.cs" />
+    <Compile Include="Helpers\IWindowVisibilityWatcher.cs" />
+    <Compile Include="Helpers\Settings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AccelerometerPage.xaml.cs">
+      <DependentUpon>AccelerometerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ButtonPage.xaml.cs">
+      <DependentUpon>ButtonPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DeviceList.xaml.cs">
+      <DependentUpon>DeviceList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DevicePage.xaml.cs">
+      <DependentUpon>DevicePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -155,7 +173,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\ScrollingGraph.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TileControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\AccelerometerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ButtonPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\DeviceList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\DevicePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
