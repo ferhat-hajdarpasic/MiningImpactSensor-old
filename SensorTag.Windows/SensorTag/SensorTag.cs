@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Core;
 
-namespace SensorTag
+namespace MiningImpactSensor
 {
     /// <summary>
     /// This class combines all of the GATT services provided by SensorTag into one helper class.

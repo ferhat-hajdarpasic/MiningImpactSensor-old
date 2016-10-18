@@ -9,7 +9,7 @@ using Windows.Devices.Enumeration;
 using Windows.Storage.Streams;
 using Buffer = Windows.Storage.Streams.Buffer;
 
-namespace SensorTag
+namespace MiningImpactSensor
 {
     /// <summary>
     /// This class provides access to the SensorTag button (key) data.  

@@ -16,7 +16,7 @@ using Windows.UI.Xaml.Shapes;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace SensorTag.Controls
+namespace MiningImpactSensor.Controls
 {
     public partial class ScrollingGraph : UserControl
     {

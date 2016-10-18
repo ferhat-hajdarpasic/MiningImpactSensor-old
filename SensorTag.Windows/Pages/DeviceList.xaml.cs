@@ -1,4 +1,4 @@
-﻿using SensorTag.Controls;
+﻿using MiningImpactSensor.Controls;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -20,7 +20,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace SensorTag.Pages
+namespace MiningImpactSensor.Pages
 {
     public sealed partial class DeviceList : UserControl
     {

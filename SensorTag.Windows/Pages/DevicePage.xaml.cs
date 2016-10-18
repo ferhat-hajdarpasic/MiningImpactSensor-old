@@ -1,4 +1,4 @@
-﻿using SensorTag.Controls;
+﻿using MiningImpactSensor.Controls;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -21,7 +21,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace SensorTag.Pages
+namespace MiningImpactSensor.Pages
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.

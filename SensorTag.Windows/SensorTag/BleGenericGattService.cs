@@ -12,7 +12,7 @@ using Windows.Devices.Enumeration;
 using Windows.Devices.Enumeration.Pnp;
 using Windows.Storage.Streams;
 
-namespace SensorTag
+namespace MiningImpactSensor
 {
     public enum GattStatus
     {

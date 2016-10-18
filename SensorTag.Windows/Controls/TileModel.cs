@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Media;
 
-namespace SensorTag.Controls
+namespace MiningImpactSensor.Controls
 {
     public class TileModel : INotifyPropertyChanged
     {

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StoreAssociation xmlns="http://schemas.microsoft.com/appx/2010/storeassociation">
   <Publisher>CN=ferha</Publisher>
-  <PublisherDisplayName>Chris Lovett</PublisherDisplayName>
+  <PublisherDisplayName>Ferhat Hajdarpasic</PublisherDisplayName>
   <GeneratePackageHash>http://www.w3.org/2001/04/xmlenc#sha256</GeneratePackageHash>
   <SupportedLocales>
     <Language Code="af" InMinimumRequirementSet="true" />
@@ -360,7 +360,7 @@
   <ProductReservedInfo>
     <MainPackageIdentityName>43906ChrisLovett.SensorTag</MainPackageIdentityName>
     <ReservedNames>
-      <ReservedName>SensorTag</ReservedName>
+      <ReservedName>MiningImpactSensor</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>

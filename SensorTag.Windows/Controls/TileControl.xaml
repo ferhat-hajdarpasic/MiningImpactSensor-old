@@ -1,9 +1,9 @@
 ﻿<UserControl
-    x:Class="SensorTag.Controls.TileControl"
+    x:Class="MiningImpactSensor.Controls.TileControl"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:SensorTag.Common"
-    xmlns:c="using:SensorTag.Controls"
+    xmlns:local="using:MiningImpactSensor.Common"
+    xmlns:c="using:MiningImpactSensor"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"

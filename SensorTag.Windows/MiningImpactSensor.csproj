@@ -144,8 +144,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="SensorTag.Windows_StoreKey.pfx" />
-    <None Include="SensorTag.Windows_TemporaryKey.pfx" />
+    <None Include="MiningImpactSensor_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Accelerometer.png" />
