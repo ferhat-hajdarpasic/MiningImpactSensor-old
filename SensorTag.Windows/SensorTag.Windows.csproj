@@ -106,13 +106,6 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <ProjectReference Include="..\SensorTagLibrary\SensorTagLibrary.csproj">
-      <Project>{702df202-1cfe-456d-9df9-5e4e4daa02a4}</Project>
-      <Name>SensorTagLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -142,6 +135,10 @@
       <DependentUpon>DevicePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SensorTag\BleAccelerometerService.cs" />
+    <Compile Include="SensorTag\BleButtonService.cs" />
+    <Compile Include="SensorTag\BleGenericGattService.cs" />
+    <Compile Include="SensorTag\SensorTag.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
